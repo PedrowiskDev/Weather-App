@@ -1,0 +1,112 @@
+@media (max-width: 1024px) {
+  .app-container {
+    grid-template-columns: 100%;
+    grid-column-gap: 0px;
+    padding: 20px;
+    grid-row-gap: 40px;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+
+    & > img {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  .showcase-container {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 10px;
+
+    & > img {
+      width: 180px;
+    }
+
+    .showcase-text {
+      & > h2:first-child {
+        font-size: 3rem;
+      }
+
+      & > h2:last-child {
+        font-size: 3.5rem;
+      }
+
+      & > p {
+        font-size: 0.825rem;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .hourly-forecast-container {
+    padding: 20px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    justify-content: center;
+    gap: 30px;
+
+    & .hour-weather-item {
+      & > img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 5px;
+      }
+
+      & > p:first-child {
+        font-size: 0.825rem;
+        text-align: center;
+      }
+
+      & > p:last-child {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .weather-details-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 15px;
+
+    & > .weather-details-item {
+      padding: 20px;
+      border-radius: 30px;
+      min-height: 130px;
+
+      & > p:first-child {
+        font-size: 0.825rem;
+        margin-bottom: 10px;
+      }
+
+      & > div > p {
+        font-size: 1.5rem;
+      }
+
+      & > div > img {
+        width: 35px;
+        height: 35px;
+      }
+
+      & > div > p > span {
+        font-size: 0.5rem;
+        margin-left: 2px;
+      }
+    }
+  }
+
+  .weekly-forecast-container {
+    & .day-weather-item > p {
+      font-size: 0.925rem;
+    }
+
+    & .day-weather-item > div > p:first-child {
+      font-size: 0.875rem;
+    }
+
+    & .day-weather-item > div > p:last-child {
+      font-size: 0.875rem;
+    }
+  }
+}
