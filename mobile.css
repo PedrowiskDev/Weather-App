@@ -43,10 +43,12 @@
 
   .hourly-forecast-container {
     padding: 20px;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-    justify-content: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    justify-content: flex-start;
     gap: 30px;
+    scroll-behavior: smooth;
 
     & .hour-weather-item {
       & > img {
