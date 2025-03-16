@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <link
@@ -7,7 +7,11 @@
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>WeatherApp</title>
+    <script
+      src="https://kit.fontawesome.com/baf86d3299.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./mobile.css" />
   </head>
@@ -20,17 +24,24 @@
             class="custom-input"
             type="text"
             name="city"
-            id="city"
+            id="city_input"
             placeholder="Procure por cidades"
           />
+          <button class="custom-button" id="search_button">
+            <i class="fa-solid fa-magnifying-glass"></i> Buscar
+          </button>
         </nav>
+
         <div class="showcase-container">
           <div class="showcase-text">
             <h2>São Paulo</h2>
+            <p><span>Ensolarado</span></p>
             <p>Chance de Chuva 0%</p>
             <h2>28°</h2>
           </div>
-          <img src="./images/sun-clouds.svg" alt="sol com nuvens" />
+          <div class="weather-icon">
+            <img src="./images/moon-clouds.svg" alt="" />
+          </div>
         </div>
 
         <div class="hourly-forecast-container">
@@ -157,6 +168,6 @@
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script type="module" src="./scripts/script.js"></script>
   </body>
 </html>

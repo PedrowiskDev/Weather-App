@@ -29,6 +29,27 @@ body {
   & > img {
     margin-right: 20px;
   }
+
+  & .custom-button {
+    display: flex;
+    align-items: center;
+    background-color: #3aa2ff;
+    margin-left: 10px;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+
+    & > i {
+      margin-right: 5px;
+    }
+  }
+
+  & .custom-button:hover {
+    background-color: #2499ff;
+  }
 }
 
 .showcase-container {
@@ -52,11 +73,20 @@ body {
       color: #2a394f;
     }
 
+    & > p:first-child {
+      color: #9aa0a8;
+    }
+
     & > p {
       color: #9aa0a8;
-      margin-bottom: 15px;
+
       font-weight: 500;
     }
+  }
+
+  .weather-icon > img {
+    width: 320px;
+    height: 310px;
   }
 }
 

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="216.6286 153.5124 89 86" width="89px" height="86px" style="">
+  <defs>
+    <filter id="filter3_f_50_47" x="0.0263119" y="36.5013" width="88.8396" height="42.8495" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="8.74936" result="effect1_foregroundBlur_50_47"/>
+    </filter>
+    <filter id="filter5_i_50_47" x="9.00006" y="0" width="70.4435" height="42.3212" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="0.553625" in="hardAlpha" result="offset-0"/>
+      <feGaussianBlur stdDeviation="0.251648" in="offset-0" result="gaussian-blur-0"/>
+      <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" in="gaussian-blur-0" result="composite-0"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" in="composite-0" result="color-matrix-0"/>
+      <feBlend mode="normal" in2="shape" result="effect1_innerShadow_50_47" in="color-matrix-0"/>
+    </filter>
+  </defs>
+  <g opacity="0.7" filter="url(#filter3_f_50_47)" transform="matrix(-0.081414, 0.774601, -1.64183, -0.172563, 206.916763, 149.503693)" style="transform-origin: 44.4461px 57.926px;">
+    <rect x="17.525" y="54" width="53.8422" height="7.85199" rx="3.92599" style="fill: rgb(255, 214, 0);"/>
+  </g>
+  <g filter="url(#filter5_i_50_47)" transform="matrix(0.904429, 0, 0, 0.936012, 251.646011, 157.837982)" style="">
+    <path d="M 43.087 22.743 C 43.267 21.722 43.361 20.671 43.361 19.598 C 43.361 9.564 35.151 1.429 25.023 1.429 C 17.493 1.429 11.024 5.925 8.199 12.355 C 5.911 10.397 10.294 43.247 16.081 43.247 L 40.741 43.247 C 46.529 43.247 51.221 38.599 51.221 32.865 C 51.221 29.16 49.262 25.908 46.314 24.07 C 45.335 23.46 44.248 23.006 43.087 22.743 Z" style="fill: rgb(72, 72, 74);"/>
+  </g>
+  <g filter="url(#filter5_i_50_47)" transform="matrix(1, 0, 0, 1, 213.251663, 163.263885)">
+    <path d="M71.3104 21.3144C71.4904 20.2928 71.5842 19.2419 71.5842 18.1692C71.5842 8.13464 63.3737 0 53.2456 0C45.7162 0 39.2466 4.49575 36.4223 10.9256C34.1343 8.96848 31.1653 7.78681 27.9208 7.78681C20.6865 7.78681 14.8218 13.6618 14.8218 20.909C14.8218 21.3126 14.84 21.7119 14.8756 22.1062C11.396 23.7948 9.00006 27.338 9.00006 31.4357C9.00006 37.1697 13.6918 41.8181 19.4793 41.8181H68.9644C74.7519 41.8181 79.4436 37.1697 79.4436 31.4357C79.4436 26.5007 75.9684 22.3699 71.3104 21.3144Z" style="fill: rgb(221, 221, 221);"/>
+  </g>
+  <g id="Layer_1" style="transform-origin: 294.527px 214.628px;" transform="matrix(0.066061, 0, 0, 0.067947, -42.280239, 2.067206)">
+    <g id="SVGRepo_bgCarrier" stroke-width="0" transform="matrix(1, 0, 0, 1, 38.526543, -41.371689)"/>
+    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" transform="matrix(1, 0, 0, 1, 38.526543, -41.371689)"/>
+    <g id="SVGRepo_iconCarrier" transform="matrix(1, 0, 0, 1, 38.526543, -41.371689)">
+      <g>
+        <g>
+          <path d="M447.482,168.016c-3.942-7.885-11.999-12.865-20.815-12.865H309.174L369.908,33.68c3.609-7.213,3.221-15.782-1.018-22.643 C364.648,4.177,357.157,0,349.091,0H209.454c-8.816,0-16.873,4.98-20.815,12.865L64.518,261.107 c-3.606,7.213-3.221,15.782,1.018,22.643c4.242,6.862,11.732,11.037,19.797,11.037h126.363l-40.511,189.062 c-2.292,10.687,3.164,21.527,13.11,26.056c3.108,1.413,6.389,2.095,9.635,2.095c7.148,0,14.119-3.299,18.627-9.311 l232.727-310.302C450.572,185.336,451.424,175.899,447.482,168.016z" style="fill: rgb(246, 187, 66);"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
