@@ -21,17 +21,17 @@
     padding-right: 0;
     margin-top: 10px;
 
-    & > img {
+    .weather-icon > img {
       width: 180px;
     }
 
     .showcase-text {
       & > h2:first-child {
-        font-size: 3rem;
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
       }
 
       & > h2:last-child {
-        font-size: 3.5rem;
+        font-size: clamp(2.5rem, 5vw, 2.8rem);
       }
 
       & > p {

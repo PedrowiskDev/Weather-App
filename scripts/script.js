@@ -3,33 +3,22 @@ import iconMap from "./iconMap.js";
 let cityInput = document.getElementById("city_input"),
   searchButton = document.getElementById("search_button"),
   api_key = "c4d65a67a785993cc96312beef35cdfd",
-  currentWeatherShowCase = document.querySelectorAll(".showcase-container")[0];
+  currentWeatherShowCase = document.querySelectorAll(".showcase-container")[0],
+  fiveDaysForecastContainer = document.querySelector(
+    ".weekly-forecast-container"
+  );
 
 function getweatherDetails(lat, lon, name, country, state) {
-  let FORECAST_API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${api_key}`,
+  let FORECAST_API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${api_key}&lang=pt_br`,
     WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api_key}&lang=pt_br`,
     days = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-    ],
-    months = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
+      "Domingo",
+      "Segunda",
+      "Terça",
+      "Quarta",
+      "Quinta",
+      "Sexta",
+      "Sábado",
     ];
 
   fetch(WEATHER_API_URL)
@@ -59,6 +48,43 @@ function getweatherDetails(lat, lon, name, country, state) {
       console.error("Erro ao obter detalhes do tempo:", error);
       alert("Falha para obter detalhes do tempo");
     });
+
+  fetch(FORECAST_API_URL)
+    .then((res) => res.json())
+    .then((data) => {
+      console.log("Resposta da API:", data);
+
+      let uniqueForecastDays = [];
+      let fiveDaysForecast = data.list.filter((forecast) => {
+        let forecastDate = new Date(forecast.dt_txt).getDate();
+        if (!uniqueForecastDays.includes(forecastDate)) {
+          return uniqueForecastDays.push(forecastDate);
+        }
+      });
+      console.log("Forecast for 5 days:", fiveDaysForecast);
+      fiveDaysForecastContainer.innerHTML = ``;
+      for (let i = 1; i < fiveDaysForecast.length; i++) {
+        let date = new Date(fiveDaysForecast[i].dt_txt);
+
+        const iconCode = fiveDaysForecast[i].weather[0].icon;
+        const customIconUrl = iconMap[iconCode];
+
+        fiveDaysForecastContainer.innerHTML += `
+        <div class="day-weather-item">
+          <p>${days[date.getDay()]}</p>
+            <img src="${customIconUrl}" alt="" />
+          <div>
+            <p>${(fiveDaysForecast[i].main.temp_max - 273.15).toFixed(0)}</p>
+            <p>${(fiveDaysForecast[i].main.temp_min - 273.15).toFixed(0)}</p>
+          </div>
+      </div>
+        `;
+      }
+    })
+    .catch((error) => {
+      console.error("Erro ao obter detalhes do tempo:", error);
+      alert("Falha para obter detalhes do tempo");
+    });
 }
 function getCityCoordinates() {
   let cityName = cityInput.value.trim();
@@ -68,7 +94,7 @@ function getCityCoordinates() {
     return;
   }
   if (!cityName) return;
-  let GEOCODING_API_URL_ = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${api_key}`;
+  let GEOCODING_API_URL_ = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${api_key}`;
   console.log(GEOCODING_API_URL_);
   fetch(GEOCODING_API_URL_)
     .then((res) => res.json())
