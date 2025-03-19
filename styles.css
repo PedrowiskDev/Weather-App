@@ -26,6 +26,31 @@ body {
   display: flex;
   align-items: center;
 
+  & .search-container {
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  & .custom-input {
+    border: none;
+    border-radius: 15px;
+    background-color: #fdfffe;
+    color: #232323;
+    padding: 16px;
+    width: 100%;
+  }
+
+  & .custom-input:focus {
+    outline: 2px solid #3aa2ff;
+  }
+
+  & .custom-input::placeholder {
+    color: #b1b8c0;
+  }
+
   & > img {
     margin-right: 20px;
   }
@@ -43,12 +68,16 @@ body {
     border: none;
 
     & > i {
-      margin-right: 5px;
+      margin-right: 0px;
     }
   }
 
   & .custom-button:hover {
     background-color: #2499ff;
+  }
+
+  & .search-text {
+    margin-left: 5px;
   }
 }
 
@@ -96,8 +125,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(90.28deg, #007dfe 0.22%, #3aa2ff 99.76%);
+  background: linear-gradient(
+    90.28deg,
+    rgb(0, 92, 184) 0.22%,
+    rgb(43, 156, 255) 99.76%
+  );
   box-shadow: 0px 30px 50px -19px rgba(1, 126, 254, 0.5);
+  border-radius: 16px;
+  backdrop-filter: blur(9.4px);
+  -webkit-backdrop-filter: blur(9.4px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 40px;
   padding: 40px;
 
@@ -133,7 +170,8 @@ body {
   margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(4, 220px);
-  grid-column-gap: 15px;
+  gap: 15px;
+  place-content: center;
 
   & > .weather-details-item {
     display: flex;
@@ -141,7 +179,12 @@ body {
     align-items: center;
     justify-content: center;
     padding: 30px;
-    background-color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 15px 15px 5px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.4px);
+    -webkit-backdrop-filter: blur(6.4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 40px;
 
     & > p:first-child {
@@ -170,6 +213,13 @@ body {
       margin-left: 5px;
     }
   }
+
+  .weather-details-item:nth-child(5),
+  .weather-details-item:nth-child(6) {
+    grid-column: span 2;
+    justify-self: center;
+    width: 220px;
+  }
 }
 
 /* Previsão do tempo semanal */
@@ -178,8 +228,12 @@ body {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  background-color: #fff;
-  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 15px 15px 5px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.4px);
+  -webkit-backdrop-filter: blur(6.4px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 40px;
 
   & .day-weather-item {
@@ -197,7 +251,7 @@ body {
   & .day-weather-item > img {
     width: 60px;
     height: 60px;
-    filter: drop-shadow(-5px 10px 25px rgba(0, 0, 0, 0.301));
+    filter: drop-shadow(-5px 10px 25px rgba(136, 136, 136, 0.151));
   }
 
   & .day-weather-item > p {
@@ -221,23 +275,4 @@ body {
     color: #8f8f8f;
     font-weight: 500;
   }
-}
-
-/* Utilidades */
-
-.custom-input {
-  border: none;
-  border-radius: 15px;
-  background-color: #fdfffe;
-  color: #232323;
-  padding: 16px;
-  width: 100%;
-}
-
-.custom-input:focus {
-  outline: 2px solid #3aa2ff;
-}
-
-.custom-input::placeholder {
-  color: #b1b8c0;
 }

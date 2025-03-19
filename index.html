@@ -20,23 +20,25 @@
       <div class="left-column">
         <nav class="navbar-container">
           <img src="./images/logo.svg" alt="logo" />
-          <input
-            class="custom-input"
-            type="text"
-            name="city"
-            id="city_input"
-            placeholder="Procure por cidades"
-          />
-          <button class="custom-button" id="search_button">
-            <i class="fa-solid fa-magnifying-glass"></i> Buscar
-          </button>
+          <div class="search-container">
+            <input
+              class="custom-input"
+              type="text"
+              name="city"
+              id="city_input"
+              placeholder="Procure por cidades"
+            />
+            <button class="custom-button" id="search_button">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <span class="search-text">Buscar</span>
+            </button>
+          </div>
         </nav>
 
         <div class="showcase-container">
           <div class="showcase-text">
-            <h2>Contagem</h2>
+            <h2>Belo Horizonte</h2>
             <p><span>Ensolarado</span></p>
-            <p>Chance de Chuva 0%</p>
             <h2>28°</h2>
           </div>
           <div class="weather-icon">
@@ -76,6 +78,7 @@
             <p>26°</p>
           </div>
         </div>
+
         <div class="weather-details-container">
           <div class="weather-details-item">
             <p>Sensação Térmica</p>
@@ -99,14 +102,29 @@
             </div>
           </div>
           <div class="weather-details-item">
-            <p>Índice UV</p>
+            <p>Pressão Atmosférica</p>
             <div>
-              <img src="./images/uv-index.svg" alt="indice uv" />
-              <p>4</p>
+              <img src="./images/pressure.svg" alt="Pressão Atmosférica" />
+              <p>1050<span>hPa</span></p>
+            </div>
+          </div>
+          <div class="weather-details-item">
+            <p>Humidade</p>
+            <div>
+              <img src="./images/humidity.svg" alt="Humidade" />
+              <p>50%</p>
+            </div>
+          </div>
+          <div class="weather-details-item">
+            <p>Visibilidade</p>
+            <div>
+              <img src="./images/visibility.svg" alt="Visibilidade" />
+              <p>10<span>Km</span></p>
             </div>
           </div>
         </div>
       </div>
+
       <div class="right-column">
         <div class="weekly-forecast-container">
           <div class="day-weather-item">
